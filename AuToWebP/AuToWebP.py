@@ -55,7 +55,7 @@ for n in files:
 		print( f"\n\u001b[0m  Converting {img_file}" )
 
 		img_webp = os.path.splitext( img_file )[0] + ".webp"
-		img.save( img_webp, format = "webp", lossless = 0 )
+		img.save( img_webp, format = "webp", lossless = 1 )
 
 		img_file_size = ( getFileSize( img_file ), getFileSize( img_webp ) )
 		compressed = getPercentages( img_file_size[1], img_file_size[0] )
